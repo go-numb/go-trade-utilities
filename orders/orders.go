@@ -38,7 +38,7 @@ func New() *Controller {
 	}
 }
 
-func (p *Controller) Length() (lenght float64) {
+func (p *Controller) Length() (lenght int) {
 	p.Orders.Range(func(key, value any) bool {
 		lenght++
 		return true

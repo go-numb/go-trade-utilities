@@ -22,7 +22,7 @@ func NewHistorical() *HistoricalController {
 	}
 }
 
-func (p *HistoricalController) Length() (buy, sell float64) {
+func (p *HistoricalController) Length() (buy, sell int) {
 	p.Orders.Range(func(key, value any) bool {
 		v := value.(Order)
 		if strings.ToUpper(v.Side) == types.BUY {
