@@ -27,6 +27,8 @@ func New(
 		PriceController:    pricing.New(targetMillisecBefore, maxPricesLength, targetActionPrice),
 		OrderController:    orders.New(),
 		PositionController: positions.New(),
+
+		HistoricalController: orders.NewHistorical(),
 	}
 }
 
